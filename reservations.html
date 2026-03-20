@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - NIA RESTAURANT</title>
+</head>
+<body>
+
+        <header>
+        <h1> NIA RESTAURANT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>🏠 HOME</b></a></li>
+                <li><a href="menu.html"><b>🍽️ MENU</b></a></li>
+                <li><a href="about.html"><b>ℹ️ ABOUT US</b></a></li>
+                <li><a href="gallery.html"><b>🖼️ GALLERY</b></a></li>
+                <li><a href="reservations.html"><b>📅 RESERVATIONS</b></a></li>
+                <li><a href="contact.html"><b>📞 CONTACT</b></a></li>
+            </ul>
+        </nav>
+        </header>
+        <br>
+        
+        <main>
+            <section id="reservations">
+                <h2>Make a Reservation</h2>
+                <p>Reserve your table today and experience authentic Indian dining! We also offer private box for family occasions and festivals.</p>
+
+                <form action="/submit-reservation" method="post">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname" requiredplaceholder="Enter your full name"><br><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="Your email@example"><br><br>
+
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91-xxxxxxxxxx"><br>
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Reservation Details</legend>
+
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date" required><br><br>
+
+                        <label for="time">Time:</label><br>
+                        <input type="time" id="time" name="time" required><br><br>
+
+                        <label for="guests">Number of Guests:</label><br>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select number of guests...</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guest</option>
+                            <option value="3">3 Guest</option>
+                            <option value="4">4 Guest</option>
+                            <option value="5">5 Guest</option>
+                            <option value="6">6 Guest</option>
+                            <option value="7">7 Guest</option>
+                            <option value="8">8 Guest</option>
+                            <option value="9+">9+ Guests (Group Booking)</option>
+
+                        </select>
+
+                        <Rag><br><br>
+
+                            <label for="occasion">Special Occasion:</label><br>
+                           
+                            <input type="radio" id="none" name="occasion" value="none" checked>
+                            <label for="none">Regular Dinning</label><br>
+
+                            <input type="radio" id="birthday"name="occasion" value="birthday">
+                            <label for="birthday">Birthday Celebration</label><br>
+                            
+                            <input type="radio" id="anniversary" name="occasion" value="anniversary">
+                            <label for="diwali">Festival Celebration (Diwali, Holi, etc.)</label><br>
+
+                            <input type="radio" id="business" name="occasion" value="business">
+                            <label for="business">Business Meeting</label><br>
+
+                            <input type="radio" id="other" name="occasion" value="other">
+                            <label for="other">Other Special Event</label><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Food Preferences</legend>
+
+                        <p><strong>Dietary Requirements:</strong></p>
+
+                        <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+                        <label for="vegetarian">Pure Vegetarian</label><br>
+
+                        <input type="checkbox" id="jain" name="diet" value="join">
+                        <label for="jain">Jain Food (No onion, garlic)</label><br>
+
+                        <input type="checkbox" id="vegan" name="diet" value="vegan">
+                        <label for="vegan">Vegan</label><br><br>
+
+
+                        <p><strong>Spice Level Preference:</strong></p>
+
+                        <input type="radio" id="mild" name="spice" value="mild">
+                        <label for="mild">Mild</label><br>
+
+                        <input type="radio" id="medium" name="spice" value="medium" checked>
+                        <label for="medium">Medium</label><br>
+
+                        <input type="radio" id="spicy" name="spice" value="spicy">
+                        <label for="spicy">Spicy</label><br>
+
+                        <input type="radio" id="extra-spicy" name="spice" value="extra-spicy">
+                        <label for="extra-spicy">Extra Spicy (Indian Style)</label><br><br>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Requests</legend>
+
+                        <input type="checkbox" id="ac" name="preferences" value="ac">
+                        <label for="ac">Air-Conditioned Section</label><br>
+
+                        <input type="checkbox" id="family" name="preferences" value="family">
+                        <label for="family">Family Section</label><br>
+
+                        <input type="checkbox" id="highchair" name="preferences" value="highchair">
+                        <label for="highchair">High Chair for Kids</label><br>
+
+                        <input type="checkbox" id="parking" name="preferences" value="parking">
+                        <label for="parking">Parking Assistance Needed</label><br><br>
+
+                        <label for="add">Food Allergies or Special Instructions: </label><br>
+                        <textarea name="add"  rows="5" cols="50" required placeholder="Please mention any allergies or special requirements..."></textarea><br>
+                    
+                    </fieldset><br>
+
+                    <button type="submit" formtarget="_blank">Confirm Reservation</button>
+                    <button type="reset">Clear Form</button>
+
+                </form>
+            </section>
+        </main>
+        <br><br>
+
+        
+        <footer>
+            <p>&copy; 2025 NIA RESTAURANT. All rights reserved.</p>
+            <p><em><b>"Atithi Devo Bhava"</b> - <i>Guest is God</i></em></p>
+            <p><a href="index.html"> Back to Home </a></p>
+        </footer>
+
+
+</body>
+</html>
